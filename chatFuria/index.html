@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat da FURIA | CS:GO Live</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <section class="landing">
+    <div class="logo-container">
+      <img src="images/Furia_Esports_logo.png" alt="Logo FURIA" class="furia-logo">
+    </div>
+    <h1>CHAT DA TORCIDA <span class="highlight">FURIA</span></h1>
+    <p class="tagline">Conecte-se com outros torcedores durante as partidas!</p>
+    <button id="enterChatBtn"><i class="fas fa-fire"></i> ENTRAR NO CHAT</button>
+  </section>
+
+  <section class="chat" style="display: none;">
+    <div class="chat-container">
+      <div class="chat-sidebar">
+        <div class="team-logo">
+          <img src="images/Furia_Esports_logo.png" alt="Logo FURIA" class="sidebar-logo">
+        </div>
+        
+        <div class="live-status">
+          <h3><i class="fas fa-circle pulse"></i> LIVE STATUS</h3>
+          <div class="match-info">
+            <div class="teams">
+              <span class="team furia">FURIA</span>
+              <span class="vs">VS</span>
+              <span class="team opponent" id="opponent">NAVI</span>
+            </div>
+            <div class="score-display">
+              <span class="score furia-score" id="furiaScore">0</span>
+              <span class="score-divider">:</span>
+              <span class="score opponent-score" id="oppScore">0</span>
+            </div>
+            <div class="match-meta">
+              <span id="mapName">Inferno</span>
+              <span id="matchStatus">Ao Vivo</span>
+            </div>
+          </div>
+          <button id="updateStatusBtn" class="status-btn"><i class="fas fa-sync-alt"></i> Atualizar</button>
+        </div>
+        
+        <div class="online-users">
+          <h3><i class="fas fa-users"></i> TORCEDORES</h3>
+          <ul id="usersList">
+            <li><i class="fas fa-circle user-online"></i> Torcedor1</li>
+            <li><i class="fas fa-circle user-online"></i> Torcedor2</li>
+            <li><i class="fas fa-circle user-online"></i> FURIA_Fan99</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="chat-main">
+        <div class="chat-header">
+          <h2><i class="fas fa-fire"></i> FURIA CHAT LIVE</h2>
+          <p id="gameStatus">FURIA vs NAVI - Inferno</p>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+          <!-- Mensagens aparecem aqui -->
+        </div>
+        
+        <div class="chat-controls">
+          <div class="reaction-buttons">
+            <button id="celebrationBtn" class="reaction-btn"><i class="fas fa-trophy"></i> Comemorar!</button>
+            <button id="cheerBtn" class="reaction-btn"><i class="fas fa-bullhorn"></i> Torcer</button>
+          </div>
+          
+          <div class="chat-input">
+            <input type="text" id="userMessage" placeholder="Digite sua mensagem...">
+            <button id="sendMessageBtn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
